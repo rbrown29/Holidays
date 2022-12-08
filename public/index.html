@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="HolidaysApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>Holiday Celebrations</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js" charset="utf-8"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body ng-controller="MainController as ctrl">
+  <h5>{{ ctrl.h5 }}</h5>
+  <div class="container">
+    <form ng-submit="ctrl.createHoliday()">
+      <input type="text" ng-model="ctrl.createForm.name" placeholder="Holiday Name">
+      <input type="text" ng-model="ctrl.createForm.description" placeholder="Holiday Description">
+      <input type="submit" value="Create New Holiday">
+    </form>
+    <table>
+      <tr ng-repeat="holiday in ctrl.holidays">
+        <td ng-dblclick="ctrl.updateCelebrated(holiday)" ng-mouseover="ctrl.chooseOneHoliday(holiday)"
+          ng-class="(holiday.celebrated ? 'celebrated' : '')">{{holiday.name}} Day</td>
+        <td ng-click="ctrl.deleteHoliday(holiday._id)">X</td>
+      </tr>
+    </table>
+    <div class="details">
+      <h3>Holiday Info:</h3>
+      <hr>
+      <h4> {{ ctrl.holiday.name }} Day </h4>
+      <h6><span> Celebrated: </span> {{ ctrl.holiday.celebrated }} </h6>
+      <h6> <span> Likes:</span> {{ ctrl.holiday.likes }}</h6>
+      <p><span> Description: </span> {{ ctrl.holiday.description }} </p>
+    </div>
+  </div>
+</body>
+
+</html>

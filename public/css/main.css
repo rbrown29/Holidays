@@ -1,0 +1,81 @@
+/** {
+  border: 1px solid teal;
+}*/
+body {
+  background-image: url('https://www.mymilestone.com/blog/wp-content/uploads/2017/11/holiday-colors-1.jpg');
+  background-size: cover;
+}
+h5 {
+  text-align: center;
+}
+
+table {
+  display: flex;
+  justify-content: space-around;
+}
+
+form {
+  max-width: 30%;
+  margin:auto;
+}
+
+td:first-child:hover{
+  cursor: pointer;
+}
+
+td:last-child:hover{
+  color: #ff5252;
+  cursor: pointer;
+}
+
+.celebrated {
+  opacity: 0.3;
+  font-style: italic;
+}
+
+img {
+  max-height : 1em;
+}
+
+img:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+}
+
+.dim {
+  background: grey;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.details {
+  background-color: #428267;
+  width: 25%;
+  position: fixed;
+  top: 19em;
+  right: 35em;
+  z-index: 1;
+  padding: 1em 1em 0;
+  border-radius: 10px  0 0 10px ;
+}
+
+h3, span {
+  color: #888;
+}
+
+.edit {
+  display: block;
+}
+.button-red {
+  background-color: #ff5252;
+}
