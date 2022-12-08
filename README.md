@@ -17,4 +17,4 @@
 
 
 
-![Holiday](../assets/holiday.png?raw=true{:height="50px"width="50px"})
+![Holiday](/public/assets/holiday.png?raw=true{:height="50px"width="50px"})
